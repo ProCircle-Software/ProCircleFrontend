@@ -1,0 +1,10 @@
+export { default as NavBar } from "./NavBar/NavBar";
+export { default as Header } from "./Header/Header";
+export { default as About } from "./About/About";
+export { default as Features } from "./Features/Features";
+export { default as Mechanism } from "./Mechanism/Mech";
+export { default as Team } from "./Team/Team";
+export { default as FAQs } from "./FAQs/Faq";
+export { default as Testimonials } from "./Testimonials/Testimonials";
+export { default as Join } from "./Join/Join";
+export { default as Footer } from "./Footer/Footer";
