@@ -1,0 +1,26 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 64px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  padding: 12px;
+  font-size: 14px;
+  color: var(--chad);
+}
+
+nav button {
+  transition: all 0.3s ease-in-out;
+}
