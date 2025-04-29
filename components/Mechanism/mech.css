@@ -1,0 +1,92 @@
+.mech {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 64px;
+  background: var(--dark-gray);
+}
+
+.mech-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.mech-heading span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--light-gray);
+}
+
+.mech-heading h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.mech-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 326px;
+  padding: 32px 24px;
+  gap: 16px;
+  background: var(--nigger);
+  border-radius: 24px;
+  color: var(--off-white);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mech-card:hover {
+  background: var(--chad) !important;
+  color: var(--nigger) !important;
+  box-shadow: 0 12px 24px -8px rgba(25, 255, 29, 0.3),
+              0 4px 24px -4px rgba(25, 255, 29, 0.15);
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Neon border animation */
+.mech-card::before {
+  /* ... existing pseudo-element styles ... */
+  background: linear-gradient(45deg, 
+    rgba(25, 255, 29, 0) 0%,
+    var(--neon-lime) 50%,
+    rgba(25, 255, 29, 0) 100%
+  );
+}
+
+/* Text transitions */
+.mech-card:hover h1 {
+  color: var(--nigger) !important;
+  transform: translateY(-4px);
+}
+
+.mech-card:hover h3 {
+  color: var(--neon-lime) !important;
+  transform: translateY(-2px);
+}
+
+.mech-card:hover p {
+  color: var(--nigger) !important;
+  transform: translateY(-1px);
+}
+
+/* Adjust initial colors */
+.mech-card h3 {
+  color: var(--neon-lime);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0.1s;
+}
+
+.mech-card p {
+  color: var(--off-white);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0.2s;
+}

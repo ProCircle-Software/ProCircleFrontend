@@ -1,0 +1,53 @@
+.about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.about-right {
+  width: 464px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-right__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about-right__heading span {
+  font-size: 14px;
+  color: var(--light-gray);
+  font-weight: 600;
+}
+
+.about-right__heading h1 {
+  font-size: 36px;
+  color: var(--off-white);
+}
+
+.about-list {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.about-list img {
+  padding-top: 4px;
+}
+
+.about-list p {
+  font-weight: 500;
+}
+
+.about-right button {
+  max-width: fit-content;
+}
+
+.about-right__lists {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
