@@ -83,13 +83,8 @@ a {
   pointer-events: none;
 }
 
+
+
 section {
   padding: 48px 100px;
 }
-
-/* 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */
