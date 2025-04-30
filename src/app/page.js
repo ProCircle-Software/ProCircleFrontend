@@ -20,6 +20,7 @@ export default function Home() {
         alt="escaping circle"
         className="esc-circle"
       />
+      <div className="faq-glow"></div>
       <NavBar />
       <Header />
       <About />

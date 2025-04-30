@@ -1,0 +1,93 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: flex-end;
+}
+
+.faq-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+  width: 400px;
+  text-align: right;
+}
+
+.faq-heading span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--light-gray);
+}
+
+.faq-heading h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.faq-questions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+  /* Add these properties to prevent row alignment issues */
+  grid-auto-rows: min-content;
+  align-items: start;
+}
+
+.faq-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 36px 24px 24px 36px;
+  gap: 24px;
+  border-radius: 20px;
+  border: 1px solid var(--neon-lime);
+  height: auto;
+  width: 100%;
+  background: var(--nigger);
+}
+
+.faq-card p {
+  font-size: 18px;
+  font-weight: 300;
+  align-self: stretch;
+}
+
+.faq-card__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.faq-card__question h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.faq-card__question:hover {
+  opacity: 0.8;
+}
+
+.faq-card__question svg {
+  transition: transform 0.3s ease;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.faq-card__answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  width: 100%;
+}
+
+.faq-card__answer.open {
+  max-height: 500px; /* Adjust based on your longest content */
+  opacity: 1;
+}
