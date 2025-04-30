@@ -62,6 +62,11 @@ const Testimonials = () => {
 
   return (
     <section className="test">
+      <img
+        src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1746034530/Add_6_per_circle_vscpxr.svg"
+        alt="svg image"
+        className="test-svg"
+      />
       <div className="testimonials-heading">
         <span>Voices of Growth</span>
         <h1>Why Members Stay, Grow, and Show Up</h1>
