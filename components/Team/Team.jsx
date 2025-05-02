@@ -68,7 +68,7 @@ const teamMemberData = [
 
 const Team = () => {
   return (
-    <section className="team">
+    <section className="team" id="team">
       <img
         src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1745915288/circles_swhnqf.svg"
         alt="circular"
