@@ -93,8 +93,28 @@ section {
   transform: translateX(-50%);
   width: 276px;
   height: 283px;
-  background: rgba(25, 255, 29, .75);
+  background: rgba(25, 255, 29, 0.75);
   filter: blur(100px);
-  opacity: .1;
+  opacity: 0.1;
   z-index: -1;
+}
+
+.tg {
+  position: absolute;
+  width: 276px;
+  height: 283px;
+  background: rgba(25, 255, 29, 1);
+  filter: blur(100px);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.test-glow-1 {
+  top: 3993px;
+  left: 186px;
+}
+
+.test-glow-2 {
+  top: 5206px;
+  right: 227px;
 }

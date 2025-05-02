@@ -29,6 +29,8 @@ export default function Home() {
       <Team />
       <FAQs />
       <Testimonials />
+      <div className="tg test-glow-1"></div>
+      <div className="tg test-glow-2"></div>
       <Join />
       <Footer />
     </div>
