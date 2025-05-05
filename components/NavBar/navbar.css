@@ -21,12 +21,6 @@ nav {
   color: var(--chad);
 }
 
-/* Remove the transition from nav button and add it directly to button classes */
-/* nav button {
-  transition: all 0.3s ease-in-out;
-} */
-
-/* Floating Navigation Styles */
 .floating-nav {
   position: fixed;
   left: 50%;
