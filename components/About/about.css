@@ -51,3 +51,38 @@
   flex-direction: column;
   gap: 16px;
 }
+
+@media screen and (max-width: 1024px) {
+  .about {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 96px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-right {
+    width: auto;
+    max-width: fit-content;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-right__heading {
+    gap: 4px;
+  }
+
+  .about-right__heading span {
+    font-size: 12px;
+  }
+
+  .about-right__heading h1 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+}

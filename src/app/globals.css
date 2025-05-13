@@ -119,6 +119,12 @@ section {
   right: 227px;
 }
 
+@media screen and (max-width: 1124px) {
+  section {
+    padding: 36px 64px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .primary-button,
   .secondary-button {
@@ -138,6 +144,11 @@ section {
   .esc-circle {
     width: 240px;
     top: 34px;
-    right: -83px; 
+    right: -83px;
+  }
+
+  section {
+    padding: 36px 20px;
+    gap: 52px !important;
   }
 }
