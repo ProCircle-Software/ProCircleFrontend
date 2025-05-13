@@ -1,14 +1,69 @@
 "use client";
 import { useState, useEffect } from "react";
 import "./navbar.css";
+import { RiMenu3Fill } from "react-icons/ri";
+import { FaXmark, FaCheck } from "react-icons/fa6";
 
-const NavLinks = () => {
+const NavLinks = ({ isMobile = false }) => {
+  const [activeLink, setActiveLink] = useState("nav");
+
+  const handleClick = (link) => {
+    setActiveLink(link);
+  };
+
   return (
-    <div className="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#features">Features</a>
-      <a href="#team">Team</a>
+    <div className={`nav-links ${isMobile ? "mobile-nav-links" : ""}`}>
+      <a
+        href="#nav"
+        className={activeLink === "nav" ? "active" : ""}
+        onClick={() => handleClick("nav")}
+      >
+        Home
+        {isMobile && activeLink === "nav" && <FaCheck />}
+      </a>
+      <a
+        href="#about"
+        className={activeLink === "about" ? "active" : ""}
+        onClick={() => handleClick("about")}
+      >
+        About
+        {isMobile && activeLink === "about" && <FaCheck />}
+      </a>
+      <a
+        href="#features"
+        className={activeLink === "features" ? "active" : ""}
+        onClick={() => handleClick("features")}
+      >
+        Features
+        {isMobile && activeLink === "features" && <FaCheck />}
+      </a>
+      <a
+        href="#team"
+        className={activeLink === "team" ? "active" : ""}
+        onClick={() => handleClick("team")}
+      >
+        Team
+        {isMobile && activeLink === "team" && <FaCheck />}
+      </a>
+    </div>
+  );
+};
+
+const MobileMenu = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="mobile-menu">
+      <div className="mobile-menu-top">
+        <div className="mobile-menu__nav">
+          <button className="primary-button">Explore</button>
+          <button className="close-button" onClick={onClose}>
+            <FaXmark />
+          </button>
+        </div>
+        <NavLinks isMobile={true} />
+      </div>
+      <button className="primary-button primary-button-join">Join Us</button>
     </div>
   );
 };
@@ -17,6 +72,7 @@ const NavBar = () => {
   const [showFloatingNav, setShowFloatingNav] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scrollingDown, setScrollingDown] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Function to handle scroll event
@@ -52,10 +108,16 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="nav">
+      <nav className="nav" id="nav">
         <p className="logo">ProCircle</p>
         <NavLinks />
-        <button className="nav-button primary-button">Explore</button>
+        <div className="nav-btns">
+          <button className="nav-button primary-button">Explore</button>
+          <RiMenu3Fill
+            className="menu-icon"
+            onClick={() => setIsMobileMenuOpen(true)}
+          />
+        </div>
       </nav>
 
       {showFloatingNav && (
@@ -63,6 +125,11 @@ const NavBar = () => {
           <NavLinks />
         </div>
       )}
+
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
     </>
   );
 };
