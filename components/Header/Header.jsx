@@ -25,6 +25,7 @@ const Header = () => {
         <img
           src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1745542143/Compressed_People_mpyt01.png"
           alt="compressed people"
+          className="compressed-people"
         />
       </div>
       <div className="header-right">

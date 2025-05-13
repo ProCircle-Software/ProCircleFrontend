@@ -134,4 +134,10 @@ section {
     padding: 10px 12px;
     font-size: 14px !important;
   }
+
+  .esc-circle {
+    width: 240px;
+    top: 34px;
+    right: -83px; 
+  }
 }
