@@ -75,7 +75,6 @@
   padding: 56px 36px;
   /* width: 100%; */
   border: 1.5px solid rgba(25, 255, 29, 0.25);
-
 }
 
 .features-grid {
@@ -86,4 +85,124 @@
   width: 100%;
   column-gap: 51px;
   row-gap: 52px;
+}
+
+/* Responsive layout for 1024px and below */
+@media (max-width: 1080px) {
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: auto auto auto; /* 3 rows */
+    gap: 48px; /* 48px gap between all cards */
+    width: 100%;
+  }
+
+  /* Reset all previous grid spans */
+  .feature-card:nth-child(-n + 3),
+  .feature-card:nth-child(4),
+  .feature-card:nth-child(5) {
+    grid-column: auto; /* Reset previous grid spans */
+  }
+
+  /* Style for all cards */
+  .feature-card:nth-child(-n + 4) {
+    display: flex;
+    padding: 36px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+  }
+
+  /* Make the last card span both columns */
+  .feature-card:nth-child(5) {
+    grid-column: 1 / -1; /* Span from first to last column */
+    padding: 76px 48px;
+    gap: 48px;
+    /* border: 2px solid var(--neon-lime); */
+  }
+
+  .feature-card:nth-child(5) img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .feature-card:nth-child(5) h4 {
+    font-size: 48px;
+  }
+
+  .feature-card:nth-child(5) p {
+    font-size: 32px;
+  }
+
+  /* Select feature cards 1-4 */
+  .feature-card:nth-child(-n + 4) img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature-card:nth-child(-n + 4) h4 {
+    font-size: 24px;
+  }
+
+  .feature-card:nth-child(-n + 4) p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feature-card:nth-child(5) {
+    padding: 56px 36px;
+    gap: 32px;
+  }
+
+  .feature-card:nth-child(5) img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .feature-card:nth-child(5) h4 {
+    font-size: 36px;
+  }
+
+  .feature-card:nth-child(5) p {
+    font-size: 24px;
+  }
+
+  .feature-card:nth-child(-n + 4) h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .features-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .feature-card,
+  .feature-card:nth-child(5) {
+    display: flex;
+    padding: 32px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 24px;
+  }
+
+  .feature-card img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .feature-card h4 {
+    font-size: 24px !important;
+  }
+
+  .feature-card p {
+    font-size: 16px !important;
+  }
 }

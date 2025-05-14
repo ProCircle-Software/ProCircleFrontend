@@ -2,7 +2,7 @@ export const featuresData = [
   {
     id: 1,
     icon: "https://res.cloudinary.com/dzohnw8e5/image/upload/v1745869505/bullseye-arrow_2_fkxgrv.svg",
-    heading: "Stay Focused with Partners",
+    heading: "Stay Focused with Reliable Partners",
     text: "Pair up with like-minded people to set goals, track progress, and stay motivated. Your partner becomes your ally in growth.",
   },
   {

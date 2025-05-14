@@ -15,8 +15,8 @@ const FeatureCard = ({ icon, heading, text }) => {
 
 const Features = () => {
   return (
-    <section className="features">
-      <div className="features-heading">
+    <section className="features" id="features">
+      <div className="features-heading global-heading">
         <span>Features That Drive Results</span>
         <h1>We Keep You Focused, You Keep Winning</h1>
       </div>

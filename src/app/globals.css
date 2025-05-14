@@ -132,6 +132,23 @@ section {
     font-size: 16px;
     border-radius: 16px;
   }
+
+  section {
+    padding: 36px 48px;
+  }
+
+  .global-heading {
+    width: 100% !important;
+    align-self: stretch;
+  }
+
+  .global-heading span {
+    font-size: 12px;
+  }
+
+  .global-heading h1 {
+    font-size: 32px !important;
+  }
 }
 
 @media screen and (max-width: 480px) {
