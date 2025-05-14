@@ -35,7 +35,7 @@ const mechanisms = [
 const Mech = () => {
   return (
     <section className="mech">
-      <div className="mech-heading">
+      <div className="mech-heading global-heading">
         <span>3 Step Process to Get Started</span>
         <h1>How It Works</h1>
       </div>

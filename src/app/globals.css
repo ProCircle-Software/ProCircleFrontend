@@ -164,8 +164,16 @@ section {
     right: -83px;
   }
 
+  .global-heading span {
+    font-size: 12px !important;
+  }
+
+  .global-heading h1 {
+    font-size: 32px !important;
+  }
+
   section {
-    padding: 36px 20px;
+    padding: 36px 20px !important;
     gap: 52px !important;
   }
 }

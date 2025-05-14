@@ -46,18 +46,23 @@
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+.mech-card p {
+  font-size: 20px;
+}
+
 .mech-card:hover {
   background: var(--chad) !important;
   color: var(--nigger) !important;
   box-shadow: 0 12px 24px -8px rgba(25, 255, 29, 0.3),
-              0 4px 24px -4px rgba(25, 255, 29, 0.15);
+    0 4px 24px -4px rgba(25, 255, 29, 0.15);
   transform: translateY(-8px) scale(1.02);
 }
 
 /* Neon border animation */
 .mech-card::before {
   /* ... existing pseudo-element styles ... */
-  background: linear-gradient(45deg, 
+  background: linear-gradient(
+    45deg,
     rgba(25, 255, 29, 0) 0%,
     var(--neon-lime) 50%,
     rgba(25, 255, 29, 0) 100%
@@ -89,4 +94,78 @@
 .mech-card p {
   color: var(--off-white);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0.2s;
+}
+
+@media screen and (max-width: 1200px) {
+  .mech {
+    padding: 36px 64px;
+  }
+
+  .mech-card {
+    width: 280px;
+  }
+
+  .mech-card p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mech {
+    padding: 36px 48px;
+  }
+
+  .mech-card {
+    width: 240px;
+  }
+
+  .mech-card p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 833px) {
+  .mech {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mech-flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .mech-card {
+    width: auto;
+    align-self: stretch;
+  }
+
+  .mech-heading {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mech-card {
+    padding: 24px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 16px;
+  }
+
+  .mech-card h1 {
+    font-size: 32px;
+  }
+
+  .mech-card h3 {
+    font-size: 24px;
+  }
+
+  .mech-card p {
+    font-size: 16px;
+  }
 }
