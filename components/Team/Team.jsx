@@ -75,7 +75,7 @@ const Team = () => {
         className="circular"
       />
       <div className="team-header">
-        <div className="team-heading">
+        <div className="team-heading global-heading">
           <span>Meet the Team Behind ProCircle</span>
           <h1>Leadership with Purpose</h1>
         </div>

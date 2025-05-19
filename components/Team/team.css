@@ -140,3 +140,69 @@
 .icon:nth-child(4) {
   transition-delay: 0.25s;
 }
+
+@media screen and (max-width: 1080px) {
+  .team-flex {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 24px;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .team {
+    align-items: center;
+  }
+
+  .team-flex {
+    grid-template-columns: repeat(1, auto);
+    align-items: center;
+  }
+
+  .team-header {
+    align-self: stretch;
+  }
+
+  .team-heading {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .team-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .team-heading {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-heading {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .team-member {
+    width: 100% !important;
+  }
+
+  .team-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .team-member-image {
+    height: 280px;
+  }
+}
