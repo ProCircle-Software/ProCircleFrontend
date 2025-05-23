@@ -8,7 +8,7 @@ const Join = () => {
     <section className="join">
       <div className="join-left">
         <div className="join-left__details">
-          <div className="join-left__details-heading">
+          <div className="join-left__details-heading global-heading">
             <span>Ready to Start</span>
             <h1>
               Join a Circle That Moves You Forward and Helps You Stay on Track
@@ -37,6 +37,7 @@ const Join = () => {
       <img
         src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1746100201/Subtract_s7lipc.png"
         alt="join us"
+        className="join-us"
       />
     </section>
   );
