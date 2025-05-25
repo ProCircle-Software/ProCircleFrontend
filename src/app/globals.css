@@ -82,7 +82,7 @@ a {
   pointer-events: none;
 }
 
-section {
+section, footer {
   padding: 48px 100px;
 }
 
@@ -120,7 +120,7 @@ section {
 }
 
 @media screen and (max-width: 1124px) {
-  section {
+  section, footer {
     padding: 36px 64px;
   }
 }
@@ -133,7 +133,7 @@ section {
     border-radius: 16px;
   }
 
-  section {
+  section, footer {
     padding: 36px 48px;
   }
 
@@ -172,7 +172,7 @@ section {
     font-size: 32px !important;
   }
 
-  section {
+  section, footer {
     padding: 36px 20px !important;
     gap: 52px !important;
   }

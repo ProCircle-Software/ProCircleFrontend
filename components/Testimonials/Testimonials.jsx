@@ -61,7 +61,7 @@ const Testimonials = () => {
   const columnArrays = distributeTestimonials();
 
   return (
-    <section className="test">
+    <section className="test" id="testimonials">
       <img
         src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1746034530/Add_6_per_circle_vscpxr.svg"
         alt="svg image"

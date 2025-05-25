@@ -16,7 +16,7 @@ const AboutList = ({ item }) => {
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <img
         src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1745588947/AboutImg_aljyzr.png"
         alt="about image"

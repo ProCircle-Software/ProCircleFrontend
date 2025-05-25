@@ -19,7 +19,7 @@ export const metadata = {
       "Discover a community designed to help professionals thrive through accountability, skill-building, and connection. Join ProCircle today!",
     images: [
       {
-        // url: "/og-image.jpg", // Replace with your OpenGraph image path
+        url: "https://res.cloudinary.com/dzohnw8e5/image/upload/v1748176095/ProMeta_qut1uv.png", // Replace with your OpenGraph image path
         width: 1200,
         height: 630,
         alt: "ProCircle Community Members Collaborating",

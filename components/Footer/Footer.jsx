@@ -2,64 +2,80 @@
 import React from "react";
 import "./footer.css";
 import Link from "next/link";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer className="foot">
-      <div className="foot-links">
-        <div className="foot-links__left">
-          <Link href={"#"}>Support</Link>
-          <Link href={"#"}>Policy</Link>
-          <Link href={"#"}>Terms</Link>
+    <footer className="footer">
+      <div className="col-1">
+        <div className="col-1__top">
+          <div className="col-1__top_pro">
+            <img
+              src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1747058246/ProCitcleLogo_ulducf.png"
+              alt="logo"
+            />
+            <p>ProCircle</p>
+          </div>
+          <p className="short-bio">
+            A community where professionals thrive together.
+          </p>
         </div>
-        <p className="foot-links__left-logo">ProCircle</p>
-        <div className="foot-links__right">
-          <Link href={"#"}>Home</Link>
-          <Link href={"#"}>About</Link>
-          <Link href={"#"}>Features</Link>
+        <Link href={""} className="secondary-button">
+          Join Us
+        </Link>
+      </div>
+      <div className="col-2 cols">
+        <h3>Quick Links</h3>
+        <div className="cols-links">
+          <Link href={"#nav"}>Home</Link>
+          <Link href={"#about"}>About</Link>
+          <Link href={"#features"}>Features</Link>
+          <Link href={"#mechanism"}>Mechanism</Link>
+          <Link href={"#testimonials"}>Testimonials</Link>
         </div>
       </div>
-      <p className="foot-work">
-        ProCircle is a vibrant professional community where accountability,
-        collaboration, and growth thrive. We empower members to achieve career
-        milestones through structured goal-setting, skill-building workshops,
-        and meaningful networking—all while fostering wellness and camaraderie.
-        Join a tribe that celebrates progress and supports every step of your
-        journey.
-      </p>
-      <div className="foot-down">
-        <p className="foot-down__left">
-          ©{currentYear} ProCircle, All rights reserved
-        </p>
-        <p className="foot-down-links__left-logo">ProCircle</p>
-        <div className="foot-down-links__right">
-          <Link href={"#"}>
-            <img
-              src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1746117546/x-twitter_smj82x.svg"
-              alt="x"
-            />
+      <div className="col-3 cols">
+        <h3>Resources</h3>
+        <div className="cols-links">
+          <Link href={"#"}>Community Guide</Link>
+          <Link href={"#"}>Workshops</Link>
+          <Link href={"#"}>Partners</Link>
+          <Link href={"#"}>FAQs</Link>
+        </div>
+      </div>
+      <div className="col-4 cols">
+        <h3>Legal</h3>
+        <div className="cols-links">
+          <Link href={"#"}>Privacy Policy</Link>
+          <Link href={"#"}>Terms of Service</Link>
+          <Link href={"#"}>Code of Conduct</Link>
+          <Link href={"#"}>Cookie Policy</Link>
+          <Link href={"#"}>Disclaimer</Link>
+        </div>
+      </div>
+      <div className="col-5 cols">
+        <div className="col-5__socials">
+          <Link href={"/"}>
+            <FaXTwitter className="social-icon"/>
           </Link>
-          <Link href={"#"}>
-            <img
-              src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1746117544/linkedin-in-_qd6t9n.svg"
-              alt="linked"
-            />
+          <Link href={"/"}>
+            <FaLinkedinIn className="social-icon"/>
           </Link>
-          <Link href={"#"}>
-            <img
-              src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1746117546/ig_c961te.svg"
-              alt="instagram"
-            />
+          <Link href={"/"}>
+            <FaInstagram className="social-icon"/>
           </Link>
-          <Link href={"#"}>
-            <img
-              src="https://res.cloudinary.com/dzohnw8e5/image/upload/v1746117545/facebook-f_cewgnb.svg"
-              alt="instagram"
-            />
+          <Link href={"/"}>
+            <FaFacebookF className="social-icon"/>
           </Link>
         </div>
+        <p>©{currentYear} ProCircle, All rights reserved</p>
       </div>
     </footer>
   );
