@@ -56,7 +56,7 @@ const teamMemberData = [
     image:
       "https://res.cloudinary.com/dzohnw8e5/image/upload/v1748193263/ChatGPT_Image_May_25_2025_06_05_04_PM_ek9evq.png",
     name: "Gift Okoro",
-    role: "Admin / Coordinators",
+    role: "Admin & Coordinators",
   },
   {
     image:
