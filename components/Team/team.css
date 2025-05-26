@@ -69,6 +69,7 @@
   gap: 8px;
   align-self: stretch;
   background: var(--dark-gray);
+  border-radius: 0 0 24px 24px ;
 }
 
 .team-member-details p {
@@ -108,8 +109,8 @@
   opacity: 0;
 }
 
-.team-member:hover {
-  border-bottom: 2px solid var(--neon-lime);
+.team-member:hover .team-member-details {
+  box-shadow: 0px -2px 0px 0px #19FF1D inset;
 }
 
 .team-member:hover .social-icons {
