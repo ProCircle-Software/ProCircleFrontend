@@ -136,7 +136,7 @@ export const teamMemberData = [
     image:
       "https://res.cloudinary.com/dzohnw8e5/image/upload/v1750110380/ChatGPT_Image_Jun_3_2025_11_44_04_PM_nfb8eo.png",
     name: "Abiola Balogun",
-    role: TEAM_ROLES.TALENT_ACQUISITION,
+    role: TEAM_ROLES.TECH_PLATFORM,
   },
   {
     image:
