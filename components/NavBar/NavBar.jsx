@@ -3,12 +3,37 @@ import { useState, useEffect } from "react";
 import "./navbar.css";
 import { RiMenu3Fill } from "react-icons/ri";
 import { FaXmark, FaCheck } from "react-icons/fa6";
+import axios from "axios";
 
 const NavLinks = ({ isMobile = false }) => {
   const [activeLink, setActiveLink] = useState("nav");
 
   const handleClick = (link) => {
     setActiveLink(link);
+  };
+
+  const [pairing, setPairing] = useState(false);
+
+  const handlePairing = async () => {
+    try {
+      setPairing(true)
+      const signUpRes = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_API}/auth/signin`, {
+        identifier: process.env.NEXT_PUBLIC_IDENTIFIER,
+        password: process.env.NEXT_PUBLIC_PASSWORD,
+      })
+      const adminToken = signUpRes.data.data.token
+
+      await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_API}/goal/pair/user`, {
+        headers: {
+          Authorization: `Bearer ${adminToken}`
+        }
+      })
+      setPairing(false)
+      alert('Goal paired successfully');
+    } catch (error) {
+      setPairing(false)
+      alert('Error pairing goal');
+    }
   };
 
   return (
@@ -45,6 +70,8 @@ const NavLinks = ({ isMobile = false }) => {
         Team
         {isMobile && activeLink === "team" && <FaCheck />}
       </a>
+      <button onClick={handlePairing} disabled={pairing} className="primary-button" style={{ borderRadius: '8px', padding: '8px 40px', color: 'black' }}>
+        {pairing ? 'Pairing...' : 'Pair Goal'}</button>
     </div>
   );
 };
